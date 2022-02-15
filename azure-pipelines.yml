@@ -54,7 +54,3 @@ steps:
     artifactName: 'webappartif'
 
 
-- task: SonarQubePrepare@5
-  inputs:
-    scannerMode: 'CLI'
-    configMode: 'file'
