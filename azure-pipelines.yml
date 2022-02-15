@@ -53,4 +53,9 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)' 
     artifactName: 'webappartif'
 
-
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'rishu_snyk'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: true
